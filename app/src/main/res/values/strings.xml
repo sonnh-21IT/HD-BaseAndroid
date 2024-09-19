@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Document Read</string>
+    <string name="home">Home</string>
+    <string name="tools">Tools</string>
+    <string name="my_files">My files</string>
+
+    <string name="please_click_back_again_to_exit">Please click back again to exit</string>
+
+    <string name="go_to_the_second_activity">Go to the second activity</string>
+    <string name="back_to_the_main_activity">Back to the main activity</string>
+
+    <string name="rep_b">Rep B</string>
+    <string name="rep_a">Rep A</string>
+    <string name="add_b">Add B</string>
+    <string name="add_a">Add A</string>
+
+    <string name="fragment_a">Fragment A</string>
+    <string name="fragment_b">Fragment B</string>
+
+    <string name="back">back</string>
+    <string name="go">GO</string>
+    <string name="go_act_2">Go Act 2</string>
+    <string name="image">image</string>
+
+</resources>

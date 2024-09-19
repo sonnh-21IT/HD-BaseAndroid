@@ -1,0 +1,79 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
+}
+
+android {
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.hd.document.read"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    // Room
+    implementation 'androidx.room:room-runtime:2.4.2'
+    kapt 'androidx.room:room-compiler:2.4.2'
+    implementation 'androidx.room:room-ktx:2.4.2'
+
+    // multidex
+    implementation "androidx.multidex:multidex:2.0.1"
+
+    // Pref
+    implementation 'com.chibatching.kotpref:kotpref:2.5.0'
+    implementation 'com.chibatching.kotpref:enum-support:2.5.0'
+
+    // Koin
+    implementation "io.insert-koin:koin-android:3.2.0"
+    implementation "io.insert-koin:koin-core:3.2.0"
+
+    // Lifecycle
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.4.1"
+    implementation "androidx.lifecycle:lifecycle-common-java8:2.4.1"
+    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+    annotationProcessor "androidx.lifecycle:lifecycle-compiler:2.4.1"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.4.1"
+
+    // Billing
+    implementation 'com.android.billingclient:billing:7.0.0'
+
+    // Toasty
+    implementation 'com.github.GrenderG:Toasty:1.5.0'
+}
